@@ -1,0 +1,6 @@
+git add .                                 ：打包你所有的變更。
+
+git commit -m "xxxxxxxxxxxxx"              :這次修改了什麼。
+
+git push origin main                      ：把這個貼好標籤的包裹寄到 GitHub。
+
