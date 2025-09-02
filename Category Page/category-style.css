@@ -1,0 +1,393 @@
+/* === 基本設定 === */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #f8f8f8;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background-image: url("../Image/34.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+  /* 讓 body 成為垂直 Flexbox 容器，讓 footer 固定在底部 */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*讓視窗滾動更加平滑，所有錨點滾動的時候都會自動預留上方空間，避免被上方頁首遮住。*/
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 140px; 
+}
+
+/* === Header 與 Footer === */
+header {
+  background-color: #fff;
+  padding: 1.3rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(to right, #d32f2f, #ff6f61);
+  border-image-slice: 1;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d32f2f;
+  flex-shrink: 0;
+}
+
+nav {
+  display: flex;
+  gap: 0.8rem;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 6px 20px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #f2f2f2;
+  color: #d32f2f;
+}
+
+nav a.OrderMenu{
+  background-color: #d32f2f;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 20px;
+  border-radius: 6px;
+}
+
+.icon-bar {
+  display: flex;
+  gap: 15px;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.icon-bar i {
+  font-size: 31px;
+  transition: transform 0.2s ease;
+}
+
+.icon-bar i:hover {
+  transform: scale(1.2);
+}
+
+.fa-instagram {
+  color: #c13584;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.fa-facebook {
+  color: #3473f1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.fa-github {
+  color: #858585;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1rem;
+  min-height: 100px;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  margin-top: auto;
+}
+
+/* === 主內容結構 === */
+.content {
+  flex-grow: 1; /* 讓內容區塊佔滿所有剩餘空間 */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5rem;
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin-left: 100px;
+  box-sizing: border-box;
+  
+  /* 增加上外距，推開固定定位的 header */
+  margin-top: 70px;
+}
+
+/* 左側選單 */
+.sidebar {
+  width: 380px;
+  background-color: #fff;
+  padding: 1.2rem;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  position: sticky;
+  top: 130px;
+  align-self: flex-start;
+  
+  /* 加入背景圖片 */
+  /*background-image: url('../Image/35.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;*/
+}
+
+/* 麵包屑 */
+.breadcrumb {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.breadcrumb a {
+  color: #000;
+  text-decoration: underline solid;
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  background-color: #f2f2f2;
+  color: #d32f2f;
+  text-decoration: underline solid;
+}
+
+/* 選單 */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu > li {
+  margin-bottom: 1.5rem;
+}
+
+.menu > li > a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.8rem;
+}
+
+.submenu li {
+  margin-bottom: 0.8rem;
+}
+
+.submenu a {
+  font-size: 1.05rem;
+  font-weight: normal;
+  color: #666;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar a:hover {
+  background-color: #f2f2f2;
+  color: #d32f2f;
+}
+
+.menu-category-card {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* 右側產品區 */
+.product-section {
+  flex: 1;
+  max-width: 800px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  row-gap: 1.5rem;
+}
+
+.product-card {
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.product-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+/* 商品詳細視窗 */
+.product-detail {
+  position: fixed;
+  top: 130px;
+  align-self: flex-start;
+  right: -600px;
+  width: 400px;
+  height: 600px;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.product-detail.active {
+  right: 4rem;
+}
+
+.detail-content img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.detail-content h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #d32f2f;
+  padding-left: 10px;
+}
+
+.detail-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 關閉商品詳細視窗按鈕 */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  color: #000;
+  cursor: pointer;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+/* 滑鼠移入時的樣式 */
+.close-btn:hover {
+  color: #d32f2f;
+  border-color: #d32f2f;
+}
+
+/* 固定可動式按鈕 共用樣式：定義兩個按鈕的共同外觀 */
+.coupon-button,.coupon-button1 {
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* 個別樣式：設定各自的位置 */
+.coupon-button {
+  bottom: 120px;
+  right: 60px;
+}
+
+.coupon-button1 {
+  bottom: 120px;
+  right: 260px;
+}
+
+/* 圖片共用樣式 */
+.coupon-button img,.coupon-button1 img {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* 連結共用樣式 */
+.coupon-link {
+  text-decoration: none;
+  color: #d32f2f;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* 滑鼠移入效果 */
+.coupon-button:hover,.coupon-button1:hover {
+  transform: scale(1.05);
+}

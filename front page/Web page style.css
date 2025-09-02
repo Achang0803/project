@@ -1,0 +1,385 @@
+/* === 基本設定 === */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #f8f8f8;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background-image: url("../Image/34.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+  /* 讓 body 成為垂直 Flexbox 容器，讓 footer 固定在底部 */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 讓視窗滾動更加平滑 */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* === Header 與 Footer === */
+header {
+  background-color: #fff;
+  padding: 1.3rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(to right, #d32f2f, #ff6f61);
+  border-image-slice: 1;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d32f2f;
+  flex-shrink: 0;
+}
+
+nav {
+  display: flex;
+  gap: 0.8rem;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 6px 20px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #f2f2f2;
+  color: #d32f2f;
+}
+
+nav a.information {
+  background-color: #d32f2f;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 20px;
+  border-radius: 6px;
+}
+
+.icon-bar {
+  display: flex;
+  gap: 15px;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.icon-bar a {
+  text-decoration: none;
+}
+
+.icon-bar i {
+  font-size: 31px;
+  transition: transform 0.2s ease;
+}
+
+.icon-bar i:hover {
+  transform: scale(1.2);
+}
+
+.fa-instagram {
+  color: #c13584; 
+  transition: color 0.3s;
+}
+
+.fa-facebook {
+  color: #3473f1;
+  transition: color 0.3s;
+}
+
+.fa-github {
+  color: #858585;
+  transition: color 0.3s;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1rem;
+  min-height: 100px;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  margin-top: auto;
+}
+
+/* === 主內容結構 === */
+/* Flexbox 佈局，讓它能佔滿頁首和頁尾之間的所有空間 */
+.content {
+  flex-grow: 1;
+  padding-top: 100px; /* 增加上內邊距，推開固定定位的 header */
+}
+
+/* 輪播圖區塊 */
+.hero-slider {
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  flex-wrap: nowrap; /* 確保圖片不換行 */
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  /* 移除 display: none; */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 2rem;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #d32f2f;
+}
+
+/* 熱門商品區塊 */
+.popular {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.popular h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #b71c1c;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: nowrap; /* 確保卡片不會換行 */
+  overflow-x: auto; /* 啟用橫向滾動 */
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch; /* 適用於 iOS 裝置，滑動更流暢 */
+}
+
+/* 自訂滾動條樣式（適用於 WebKit 瀏覽器，如 Chrome 和 Safari） */
+.card-container::-webkit-scrollbar {
+  height: 8px; /* 設定滾動條的高度 */
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background-color: #d32f2f; /* 滑動塊的顏色 */
+  border-radius: 4px;
+}
+
+.card-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* 軌道的顏色 */
+}
+
+/* 自訂滾動條樣式（適用於 Firefox） */
+.card-container {
+  scrollbar-width: thin;
+  scrollbar-color: #d32f2f #f1f1f1;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  /* 確保卡片有足夠寬度並能被 Flex 佈局控制 */
+  min-width: 200px;
+  flex-shrink: 0;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 150px; /* 固定圖片高度 */
+  border-radius: 8px;
+  object-fit: cover; /* 確保圖片不被拉伸 */
+  object-position: center; /* 讓圖片置中 */
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.card .price {
+  color: #d32f2f;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.card .add {
+  margin-top: 0.8rem;
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card .add:hover {
+  background-color: #b71c1c;
+}
+
+/* === 最新消息區塊 === */
+.news {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #b71c1c;
+}
+
+.news-container {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 480px; /* 設定固定高度，避免換頁時版面跳動 */
+  overflow: hidden; /* 隱藏超出範圍的項目 */
+}
+
+.news-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+  color: #555;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-item:hover {
+  background-color: #f9f9f9;
+}
+
+.news-icon {
+  color: #d32f2f;
+  margin-right: 15px;
+}
+
+.news-text {
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.news-date {
+  color: #999;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.news-pagination {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.page-arrow {
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.page-arrow:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

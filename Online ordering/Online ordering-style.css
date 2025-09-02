@@ -1,0 +1,155 @@
+/* === 基本設定 === */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #f8f8f8;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  background-image: url("../Image/34.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+  /* 讓 body 成為垂直 Flexbox 容器 */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*讓視窗滾動更加平滑，所有錨點滾動的時候都會自動預留上方空間，避免被上方頁首遮住。*/
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px; 
+}
+
+/* === Header 與 Footer === */
+header {
+  background-color: #fff;
+  padding: 1.3rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(to right, #d32f2f, #ff6f61);
+  border-image-slice: 1;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d32f2f;
+  flex-shrink: 0;
+}
+
+nav {
+  display: flex;
+  gap: 0.8rem;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 6px 20px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #f2f2f2;
+  color: #d32f2f;
+}
+
+nav a.Onlineordering{
+  background-color: #d32f2f;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 20px;
+  border-radius: 6px;
+}
+
+.icon-bar {
+  display: flex;
+  gap: 15px;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.icon-bar i {
+  font-size: 31px;
+  transition: transform 0.2s ease;
+}
+
+.icon-bar i:hover {
+  transform: scale(1.2);
+}
+
+.fa-instagram {
+  color: #c13584; /* 這是一個常見的 Instagram 顏色 */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.fa-facebook {
+  color: #3473f1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.fa-github {
+  color: #858585;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* === 主要內容區塊 (QR Code) === */
+.qr-code-section {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  flex-grow: 1; /* 讓此區塊佔滿所有剩餘空間 */
+  padding-top: 300px; /* 避開固定 header */
+  padding-bottom: 300px; /* 增加底部內距，讓內容區塊變長 */
+}
+
+.qr-code-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-code-img {
+  width: 400px; /* 設定寬度，您可以調整這個數值 */
+  height: auto; /* 高度自動等比例調整，保持圖片不變形 */
+}
+
+/* === Footer === */
+.footer {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1rem;
+  min-height: 100px;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  margin-top: auto;
+}
