@@ -14,7 +14,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   
-  /* 讓 body 成為垂直 Flexbox 容器 */
+  /* 讓 body 成為垂直 Flexbox 容器，讓 footer 固定在底部 */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -74,14 +74,6 @@ nav a:hover {
   color: #d32f2f;
 }
 
-nav a.Onlineordering{
-  background-color: #d32f2f;
-  color: #fff;
-  font-weight: bold;
-  padding: 6px 20px;
-  border-radius: 6px;
-}
-
 .icon-bar {
   display: flex;
   gap: 15px;
@@ -101,7 +93,7 @@ nav a.Onlineordering{
 }
 
 .fa-instagram {
-  color: #c13584; /* 這是一個常見的 Instagram 顏色 */
+  color: #c13584;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -118,29 +110,6 @@ nav a.Onlineordering{
   transition: color 0.3s;
 }
 
-/* === 主要內容區塊 (QR Code) === */
-.qr-code-section {
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-  flex-grow: 1; /* 讓此區塊佔滿所有剩餘空間 */
-  padding-top: 300px; /* 避開固定 header */
-  padding-bottom: 300px; /* 增加底部內距，讓內容區塊變長 */
-}
-
-.qr-code-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.qr-code-img {
-  width: 400px; /* 設定寬度，您可以調整這個數值 */
-  height: auto; /* 高度自動等比例調整，保持圖片不變形 */
-}
-
-/* === Footer === */
 .footer {
   background-color: #000;
   color: #fff;
