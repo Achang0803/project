@@ -250,6 +250,51 @@
   cursor: not-allowed;
 }
 
+/* 固定可動式按鈕 共用樣式：定義兩個按鈕的共同外觀 */
+.coupon-button,.coupon-button1 {
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* 個別樣式：設定各自的位置 */
+.coupon-button {
+  bottom: 220px;
+  right: 60px;
+}
+
+.coupon-button1 {
+  bottom: 120px;
+  right: 60px;
+}
+
+/* 圖片共用樣式 */
+.coupon-button img,.coupon-button1 img {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* 連結共用樣式 */
+.coupon-link {
+  text-decoration: none;
+  color: #d32f2f;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* 滑鼠移入效果 */
+.coupon-button:hover,.coupon-button1:hover {
+  transform: scale(1.05);
+}
+
 /* 首頁紅框*/
 nav a.information {
   background-color: #d32f2f;
