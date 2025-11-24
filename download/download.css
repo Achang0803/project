@@ -1,29 +1,123 @@
-/* === 主要內容區塊 (QR Code) === */
-.qr-code-section {
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-  flex-grow: 1; /* 讓此區塊佔滿所有剩餘空間 */
-  padding-top: 300px; /* 避開固定 header */
-  padding-bottom: 300px; /* 增加底部內距，讓內容區塊變長 */
+
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif; 
+    background-color: #23272f; 
 }
 
-.qr-code-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.download-page-content {
+    background-image: url('../Image/34.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    
+    color: #000000; 
+    text-align: center;
+    
+    padding-top: 150px; 
+    padding-bottom: 50px; 
+    min-height: 100vh; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.app-logo {
+    width: 96px; 
+    height: 96px;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: 3.5rem; 
+    font-weight: 900; 
+    margin-bottom: 10px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.main-title .highlight {
+    color: #ffd700; 
+    text-shadow: 
+        1px 1px 0 #000, 
+        -1px 1px 0 #000, 
+        1px -1px 0 #000, 
+        -1px -1px 0 #000;
+}
+
+.description-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: #333333; 
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #5865f2; 
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-bottom: 50px; 
+}
+
+.download-button:hover {
+    background-color: #4752c4;
+}
+
+
+.content-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.qr-code-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85); 
+    border-radius: 15px;
 }
 
 .qr-code-img {
-  width: 400px; /* 設定寬度，您可以調整這個數值 */
-  height: auto; /* 高度自動等比例調整，保持圖片不變形 */
+    width: 250px; 
+    height: 250px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.qr-code-text {
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.qr-code-section, .qr-code-container {
+    padding: 0 !important; 
+    flex-grow: unset !important;
 }
 
 nav a.Downloadtheapp{
-  background-color: #d32f2f;
-  color: #fff;
-  font-weight: bold;
-  padding: 6px 20px;
-  border-radius: 6px;
+    background-color: #d32f2f;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 20px;
+    border-radius: 6px;
 }

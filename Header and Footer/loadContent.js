@@ -1,4 +1,4 @@
-// loadContent.js
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // 載入頁首

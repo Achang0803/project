@@ -42,7 +42,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 60px;
-    flex-wrap: wrap; /* 確保在小螢幕上會換行 */
+    flex-wrap: wrap; 
 }
 
 .column {
@@ -51,7 +51,7 @@
 }
 
 .column img {
-    width: 100%; /* 這行是關鍵！讓圖片寬度佔滿父層容器 */
+    width: 100%; 
     height: auto;
     display: block;
     border-radius: 8px;
@@ -59,7 +59,7 @@
 }
 
 .image-left {
-    order: -1; /* 讓圖片在左側 */
+    order: -1; 
 }
 
 .item-title {
@@ -74,7 +74,7 @@
     line-height: 1.6;
 }
 
-/* 確保在小螢幕上排版正確 */
+/* 小螢幕上排版設定*/
 @media (max-width: 768px) {
     .row {
         flex-direction: column;

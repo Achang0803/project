@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // 1. 在 JavaScript 中定義一個商品描述的物件
+  
   const productDescriptions = {
     '豬排蛋餅+中杯紅(奶)茶': '豬排蛋餅搭配中杯紅茶或奶茶，是本店最受歡迎的早餐組合！',
     '鐵板麵+豬排+任選飲料': '任選口味鐵板麵配上大份量的豬排，再任選一杯飲料，絕對能滿足您的胃。',
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     '拿鐵': '香濃的咖啡與滑順的牛奶，口感溫潤。(中杯、大杯)(滿冰、微冰、去冰、熱的)'
   };
 
-  // 2. 選取所有需要的 HTML 元素
+  
   const productCards = document.querySelectorAll('.product-card');
   const detailWindow = document.querySelector('.product-detail');
   const closeBtn = document.querySelector('.close-btn');
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const detailTitle = document.getElementById('detail-title');
   const detailDesc = document.getElementById('detail-desc');
 
-  // 3. 創建一個函數來更新商品詳細視窗，方便重複使用
+ 
   function updateProductDetail(title, img, desc) {
     detailImg.src = img;
     detailTitle.textContent = title;
@@ -102,26 +102,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // 5. 幫關閉按鈕加上點擊事件
+  
   closeBtn.addEventListener('click', function() {
     detailWindow.classList.remove('active');
   });
 
-  // 6. 點擊視窗外部區域也可以關閉
+  
   detailWindow.addEventListener('click', function(event) {
     if (event.target === detailWindow) {
       detailWindow.classList.remove('active');
     }
   });
 
-  // 7. 新增的程式碼：在頁面載入時，預設顯示指定的餐點
-  // 請在此處指定您想要預設顯示的餐點資訊
+  
   const defaultProduct = {
-    title: '紅茶', // 在此填寫您想要預設顯示的餐點名稱
-    imgSrc: "../Image/8.png", // 請將此處的圖片路徑替換成您自己的圖片路徑
+    title: '紅茶', 
+    imgSrc: "../Image/8.png", 
     desc: '經典古早味紅茶，茶香甘醇，是餐點的最佳搭檔。(中杯、大杯、特大)(無糖、有糖)(滿冰、微冰、去冰)。'
   };
 
-  // 使用剛才封裝的函數來顯示預設的商品詳細
+  
   updateProductDetail(defaultProduct.title, defaultProduct.imgSrc, defaultProduct.desc);
 });
