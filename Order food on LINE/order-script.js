@@ -691,7 +691,7 @@ orderForm.addEventListener("submit", async (event) => {
     };
 
     // ★★★ 這裡放你的 GAS 部署網址 ★★★
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxUfXfVo1Af4SDjG_JQW2Txsa9tQC2AX5q3Og-adab8k5rA4YjKIktZfq21iO1FGA4C/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwkJdrAolyZg8KdLLnn2mnt3t-sWs9Oag0lzSBLYzH1FbkwRiW-q021Tcnt_vGNAamg/exec";
 
     try {
         await fetch(scriptURL, {
