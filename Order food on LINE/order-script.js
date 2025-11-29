@@ -666,3 +666,50 @@ renderMenuItems('all');
 // 確保剛載入時，購物車頁面是隱藏的，點餐類別導覽列是顯示的
 cartSection.style.display = 'none';
 categoryNav.style.display = 'block';
+
+orderForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (Object.keys(cart).length === 0) {
+        alert("購物車是空的，無法送出訂單！");
+        return;
+    }
+
+    const orderData = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        diningOption: document.getElementById("dining-option").value,
+        pickupTime: document.getElementById("pickup-time").value,
+        totalPrice: totalPriceEl.textContent.replace("$", ""),
+        cartItems: Object.values(cart).map(item => ({
+            name: item.name,
+            quantity: item.quantity,
+            price: item.price,
+            options: item.options,
+            subTotal: item.price * item.quantity
+        }))
+    };
+
+    // ★★★ 這裡放你的 GAS 部署網址 ★★★
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxUfXfVo1Af4SDjG_JQW2Txsa9tQC2AX5q3Og-adab8k5rA4YjKIktZfq21iO1FGA4C/exec";
+
+    try {
+        await fetch(scriptURL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(orderData),
+        });
+
+        alert("訂單已送出成功！");
+        cart = {};
+        updateCart();
+        orderForm.reset();
+
+    } catch (error) {
+        console.error("送出失敗：", error);
+        alert("送出訂單時發生錯誤！");
+    }
+});
