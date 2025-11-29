@@ -57,9 +57,12 @@
             <h2>填寫訂單資訊</h2>
             <form id="order-form">
                 <label for="name">暱稱:</label>
-                <input type="text" id="name" required>
+                <!-- 修正：新增 autocomplete="name" -->
+                <input type="text" id="name" required autocomplete="name"> 
+                
                 <label for="phone">電話:</label>
-                <input type="tel" id="phone" required>
+                <!-- 修正：新增 autocomplete="tel" -->
+                <input type="tel" id="phone" required autocomplete="tel">
                 
                 <label for="dining-option">用餐方式:</label>
                 <select id="dining-option">
@@ -68,10 +71,19 @@
                 </select>
 
                 <label for="pickup-time">取餐時間:</label>
-                <input type="time" id="pickup-time" required>
+                <!-- 修正：新增 autocomplete="off" -->
+                <input type="time" id="pickup-time" required autocomplete="off">
                 <button type="submit" id="submit-order">送出訂單</button>
             </form>
         </section>
+        
+        <section id="order-result-section" class="hidden">
+         <div id="order-result-message">
+            <!-- JS 會在這裡填入訂單成功/失敗訊息 -->
+         </div>
+         <button id="back-to-menu">返回菜單</button>
+         </section>
+    
     </main>
 
     <div id="item-modal" class="modal">
