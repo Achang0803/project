@@ -4,7 +4,7 @@ const headerCartIcon = document.getElementById('header-cart-icon');
 
 
 const menuItems = [
-    { id: 1, name: '(特餐)豬排蛋餅+中杯紅(奶)茶', price: 0, category: '特餐', img: '../Image/01.png',
+    { id: 1, name: '(特餐)豬排蛋餅+中杯紅(奶)茶', price: 80, category: '特餐', img: '../Image/01.png',
         options: [
             { name: '選擇飲料', type: 'radio', choices: ['紅茶', '奶茶'], required: true },
             { name: '甜度', type: 'radio', choices: ['正常甜', '微甜'], required: true },
@@ -12,7 +12,7 @@ const menuItems = [
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
         ]
     },
-    { id: 2, name: '(特餐)鐵板麵+豬排+任選飲料', price: 0, category: '特餐', img: '../Image/01.png',
+    { id: 2, name: '(特餐)鐵板麵+豬排+任選飲料', price: 110, category: '特餐', img: '../Image/01.png',
         options: [
             { name: '麵種類', type: 'radio', choices: ['黑胡椒', '蘑菇','奶油', '肉醬','沙茶', '宮保'], required: true },
             { name: '加蛋選項', type: 'radio', choices: ['加蛋', '不加'], required: true },
@@ -23,12 +23,12 @@ const menuItems = [
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
         ]
     },
-    { id: 3, name: '(特餐)新品蘋果汁買一送一(限大杯)', price: 0, category: '特餐', img: '../Image/01.png',
+    { id: 3, name: '(特餐)新品蘋果汁買一送一(限大杯)', price: 60, category: '特餐', img: '../Image/01.png',
         options: [
             { name: '甜度', type: 'radio', choices: ['正常不加糖', '加微糖'], required: true }
         ]
     },
-    { id: 4, name: '(特餐)雞塊(4顆)+薯條+任選飲料', price: 0, category: '特餐', img: '../Image/01.png',
+    { id: 4, name: '(特餐)雞塊(4顆)+薯條+任選飲料', price: 80, category: '特餐', img: '../Image/01.png',
         options: [
             { name: '選擇飲料', type: 'radio', choices: ['紅茶', '奶茶'], required: true },
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
@@ -37,7 +37,7 @@ const menuItems = [
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
         ]
     },
-    { id: 5, name: '(特餐)薯條+薯餅+熱狗+任選飲料', price: 0, category: '特餐', img: '../Image/01.png',
+    { id: 5, name: '(特餐)薯條+薯餅+熱狗+任選飲料', price: 100, category: '特餐', img: '../Image/01.png',
         options: [
             { name: '選擇飲料', type: 'radio', choices: ['紅茶', '奶茶'], required: true },
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
@@ -46,17 +46,7 @@ const menuItems = [
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
         ]
     },
-    { id: 6, name: '(特餐)抓餅+薯餅+任選飲料', price: 0, category: '特餐', img: '../Image/01.png',
-        options: [
-            { name: '加蛋選項', type: 'radio', choices: ['加蛋', '不加'], required: true },
-            { name: '選擇飲料', type: 'radio', choices: ['紅茶', '奶茶'], required: true },
-            { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
-            { name: '甜度', type: 'radio', choices: ['正常甜', '微甜'], required: true },
-            { name: '溫度', type: 'radio', choices: ['冰', '熱'], required: true },
-            { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
-        ]
-    },
-    { id: 7, name: '(特餐)蘿蔔糕+熱狗+任選飲料', price: 0, category: '特餐', img: '../Image/01.png',
+    { id: 6, name: '(特餐)抓餅+薯餅+任選飲料', price: 110, category: '特餐', img: '../Image/01.png',
         options: [
             { name: '加蛋選項', type: 'radio', choices: ['加蛋', '不加'], required: true },
             { name: '選擇飲料', type: 'radio', choices: ['紅茶', '奶茶'], required: true },
@@ -66,229 +56,239 @@ const menuItems = [
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
         ]
     },
-    { id: 8, name: '(特餐)燻雞蛋堡+柳橙汁', price: 0, category: '特餐', img: '../Image/01.png',
+    { id: 7, name: '(特餐)蘿蔔糕+熱狗+任選飲料', price: 95, category: '特餐', img: '../Image/01.png',
+        options: [
+            { name: '加蛋選項', type: 'radio', choices: ['加蛋', '不加'], required: true },
+            { name: '選擇飲料', type: 'radio', choices: ['紅茶', '奶茶'], required: true },
+            { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
+            { name: '甜度', type: 'radio', choices: ['正常甜', '微甜'], required: true },
+            { name: '溫度', type: 'radio', choices: ['冰', '熱'], required: true },
+            { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
+        ]
+    },
+    { id: 8, name: '(特餐)燻雞蛋堡+柳橙汁', price: 95, category: '特餐', img: '../Image/01.png',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
         ]
     },
-    { id: 9, name: '蔬菜吐司', price: 0, category: '吐司', img: '../Image/7.jpg',
+    { id: 9, name: '蔬菜吐司', price: 35, category: '吐司', img: '../Image/7.jpg',
         options: [
             { name: '加蛋選項', type: 'radio', choices: ['加蛋', '不加'], required: true },
         ]
     },
-    { id: 10, name: '煎蛋吐司', price: 0, category: '吐司', img: '../Image/7.jpg',
+    { id: 10, name: '煎蛋吐司', price: 30, category: '吐司', img: '../Image/7.jpg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 11, name: '果醬吐司', price: 0, category: '吐司', img: '../Image/7.jpg',
+    { id: 11, name: '果醬吐司', price: 25, category: '吐司', img: '../Image/7.jpg',
         options: [
             { name: '加蛋選項', type: 'radio', choices: ['加蛋', '不加'], required: true },
         ]
     },
-    { id: 12, name: '起司蛋吐司', price: 0, category: '吐司', img: '../Image/7.jpg',
+    { id: 12, name: '起司蛋吐司', price: 40, category: '吐司', img: '../Image/7.jpg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 13, name: '豬肉蛋吐司', price: 0, category: '吐司', img: '../Image/7.jpg',
+    { id: 13, name: '豬肉蛋吐司', price: 45, category: '吐司', img: '../Image/7.jpg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 14, name: '豬排蛋吐司', price: 0, category: '吐司', img: '../Image/7.jpg',
+    { id: 14, name: '豬排蛋吐司', price: 50, category: '吐司', img: '../Image/7.jpg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 15, name: '肉鬆蛋吐司', price: 0, category: '吐司', img: '../Image/7.jpg',
+    { id: 15, name: '肉鬆蛋吐司', price: 35, category: '吐司', img: '../Image/7.jpg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 16, name: '火腿蛋吐司', price: 0, category: '吐司', img: '../Image/7.jpg',
+    { id: 16, name: '火腿蛋吐司', price: 45, category: '吐司', img: '../Image/7.jpg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 17, name: '培根蛋吐司', price: 0, category: '吐司', img: '../Image/7.jpg',
+    { id: 17, name: '培根蛋吐司', price: 50, category: '吐司', img: '../Image/7.jpg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 18, name: '鮪魚蛋吐司', price: 0, category: '吐司', img: '../Image/7.jpg',
+    { id: 18, name: '鮪魚蛋吐司', price: 45, category: '吐司', img: '../Image/7.jpg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 19, name: '薯餅蛋吐司', price: 0, category: '吐司', img: '../Image/7.jpg',
+    { id: 19, name: '薯餅蛋吐司', price: 50, category: '吐司', img: '../Image/7.jpg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 20, name: '雞腿蛋吐司', price: 0, category: '吐司', img: '../Image/7.jpg',
+    { id: 20, name: '雞腿蛋吐司', price: 65, category: '吐司', img: '../Image/7.jpg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 21, name: '果醬厚片', price: 0, category: '厚片', img: '../Image/10.jpg',
+    { id: 21, name: '果醬厚片', price: 30, category: '厚片', img: '../Image/10.jpg',
         options: [
             { name: '烤酥選項', type: 'radio', choices: ['酥一點', '正常', '微烤'], required: true },
         ]
     },
-    { id: 22, name: '起司厚片', price: 0, category: '厚片', img: '../Image/10.jpg',
+    { id: 22, name: '起司厚片', price: 30, category: '厚片', img: '../Image/10.jpg',
         options: [
             { name: '烤酥選項', type: 'radio', choices: ['酥一點', '正常', '微烤'], required: true },
         ]
     },
-    { id: 23, name: '鮪魚厚片', price: 0, category: '厚片', img: '../Image/10.jpg',
+    { id: 23, name: '鮪魚厚片', price: 30, category: '厚片', img: '../Image/10.jpg',
         options: [
             { name: '烤酥選項', type: 'radio', choices: ['酥一點', '正常', '微烤'], required: true },
         ]
     },
-    { id: 24, name: '燻雞厚片', price: 0, category: '厚片', img: '../Image/10.jpg',
+    { id: 24, name: '燻雞厚片', price: 40, category: '厚片', img: '../Image/10.jpg',
         options: [
             { name: '烤酥選項', type: 'radio', choices: ['酥一點', '正常', '微烤'], required: true },
         ]
     },
-    { id: 25, name: '豬排蛋捲餅', price: 0, category: '捲餅', img: '../Image/11.png',
+    { id: 25, name: '豬排蛋捲餅', price: 50, category: '捲餅', img: '../Image/11.png',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 26, name: '玉米蛋捲餅', price: 0, category: '捲餅', img: '../Image/11.png',
+    { id: 26, name: '玉米蛋捲餅', price: 40, category: '捲餅', img: '../Image/11.png',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 27, name: '肉鬆蛋捲餅', price: 0, category: '捲餅', img: '../Image/11.png',
+    { id: 27, name: '肉鬆蛋捲餅', price: 40, category: '捲餅', img: '../Image/11.png',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 28, name: '培根蛋捲餅', price: 0, category: '捲餅', img: '../Image/11.png',
+    { id: 28, name: '培根蛋捲餅', price: 45, category: '捲餅', img: '../Image/11.png',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 29, name: '鮪魚蛋捲餅', price: 0, category: '捲餅', img: '../Image/11.png',
+    { id: 29, name: '鮪魚蛋捲餅', price: 45, category: '捲餅', img: '../Image/11.png',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 30, name: '薯餅蛋捲餅', price: 0, category: '捲餅', img: '../Image/11.png',
+    { id: 30, name: '薯餅蛋捲餅', price: 50, category: '捲餅', img: '../Image/11.png',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
         ]
     },
-    { id: 31, name: '豬肉蛋堡', price: 0, category: '漢堡', img: '../Image/12.jpeg',
-        options: [
-            { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
-            { name: '去洋蔥選項', type: 'radio', choices: ['正常', '去洋蔥'], required: true },
-            { name: '去醬料選項', type: 'radio', choices: ['去沙拉醬', '去番茄醬', '兩種都去'], required: true },
-        ]
-    },
-    { id: 32, name: '豬排蛋堡', price: 0, category: '漢堡', img: '../Image/12.jpeg',
+    { id: 31, name: '豬肉蛋堡', price: 50, category: '漢堡', img: '../Image/12.jpeg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
             { name: '去洋蔥選項', type: 'radio', choices: ['正常', '去洋蔥'], required: true },
             { name: '去醬料選項', type: 'radio', choices: ['去沙拉醬', '去番茄醬', '兩種都去'], required: true },
         ]
     },
-    { id: 33, name: '火腿蛋堡', price: 0, category: '漢堡', img: '../Image/12.jpeg',
+    { id: 32, name: '豬排蛋堡', price: 55, category: '漢堡', img: '../Image/12.jpeg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
             { name: '去洋蔥選項', type: 'radio', choices: ['正常', '去洋蔥'], required: true },
             { name: '去醬料選項', type: 'radio', choices: ['去沙拉醬', '去番茄醬', '兩種都去'], required: true },
         ]
     },
-    { id: 34, name: '培根蛋堡', price: 0, category: '漢堡', img: '../Image/12.jpeg',
+    { id: 33, name: '火腿蛋堡', price: 55, category: '漢堡', img: '../Image/12.jpeg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
             { name: '去洋蔥選項', type: 'radio', choices: ['正常', '去洋蔥'], required: true },
             { name: '去醬料選項', type: 'radio', choices: ['去沙拉醬', '去番茄醬', '兩種都去'], required: true },
         ]
     },
-    { id: 35, name: '香雞蛋堡', price: 0, category: '漢堡', img: '../Image/12.jpeg',
+    { id: 34, name: '培根蛋堡', price: 55, category: '漢堡', img: '../Image/12.jpeg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
             { name: '去洋蔥選項', type: 'radio', choices: ['正常', '去洋蔥'], required: true },
             { name: '去醬料選項', type: 'radio', choices: ['去沙拉醬', '去番茄醬', '兩種都去'], required: true },
         ]
     },
-    { id: 36, name: '燻雞蛋堡', price: 0, category: '漢堡', img: '../Image/12.jpeg',
+    { id: 35, name: '香雞蛋堡', price: 60, category: '漢堡', img: '../Image/12.jpeg',
         options: [
             { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
             { name: '去洋蔥選項', type: 'radio', choices: ['正常', '去洋蔥'], required: true },
             { name: '去醬料選項', type: 'radio', choices: ['去沙拉醬', '去番茄醬', '兩種都去'], required: true },
         ]
     },
-    { id: 37, name: '原味蛋餅', price: 0, category: '蛋餅', img: '../Image/13.png' },
-    { id: 38, name: '起司蛋餅', price: 0, category: '蛋餅', img: '../Image/13.png' },
-    { id: 39, name: '肉鬆蛋餅', price: 0, category: '蛋餅', img: '../Image/13.png' },
-    { id: 40, name: '火腿蛋餅', price: 0, category: '蛋餅', img: '../Image/13.png' },
-    { id: 41, name: '玉米蛋餅', price: 0, category: '蛋餅', img: '../Image/13.png' },
-    { id: 42, name: '培根蛋餅', price: 0, category: '蛋餅', img: '../Image/13.png' },
-    { id: 43, name: '鮪魚蛋餅', price: 0, category: '蛋餅', img: '../Image/13.png' },
-    { id: 44, name: '燻雞蛋餅', price: 0, category: '蛋餅', img: '../Image/13.png' },
-    { id: 45, name: '薯餅蛋餅', price: 0, category: '蛋餅', img: '../Image/13.png' },
-    { id: 46, name: '豬排蛋餅', price: 0, category: '蛋餅', img: '../Image/13.png' },
-    { id: 47, name: '黑胡椒鐵板麵', price: 0, category: '鐵板麵', img: '../Image/14.jpg', 
+    { id: 36, name: '燻雞蛋堡', price: 60, category: '漢堡', img: '../Image/12.jpeg',
+        options: [
+            { name: '去蛋選項', type: 'radio', choices: ['正常', '不加'], required: true },
+            { name: '去洋蔥選項', type: 'radio', choices: ['正常', '去洋蔥'], required: true },
+            { name: '去醬料選項', type: 'radio', choices: ['去沙拉醬', '去番茄醬', '兩種都去'], required: true },
+        ]
+    },
+    { id: 37, name: '原味蛋餅', price: 30, category: '蛋餅', img: '../Image/13.png' },
+    { id: 38, name: '起司蛋餅', price: 35, category: '蛋餅', img: '../Image/13.png' },
+    { id: 39, name: '肉鬆蛋餅', price: 35, category: '蛋餅', img: '../Image/13.png' },
+    { id: 40, name: '火腿蛋餅', price: 40, category: '蛋餅', img: '../Image/13.png' },
+    { id: 41, name: '玉米蛋餅', price: 40, category: '蛋餅', img: '../Image/13.png' },
+    { id: 42, name: '培根蛋餅', price: 40, category: '蛋餅', img: '../Image/13.png' },
+    { id: 43, name: '鮪魚蛋餅', price: 40, category: '蛋餅', img: '../Image/13.png' },
+    { id: 44, name: '燻雞蛋餅', price: 40, category: '蛋餅', img: '../Image/13.png' },
+    { id: 45, name: '薯餅蛋餅', price: 50, category: '蛋餅', img: '../Image/13.png' },
+    { id: 46, name: '豬排蛋餅', price: 55, category: '蛋餅', img: '../Image/13.png' },
+    { id: 47, name: '黑胡椒鐵板麵', price: 60, category: '鐵板麵', img: '../Image/14.jpg', 
         options: [
             { name: '加蛋選項', type: 'radio', choices: ['加蛋', '不加'], required: true },
             { name: '蛋熟度', type: 'radio', choices: ['全熟', '半熟', '炒蛋'], required: true },
         ]
     },
-    { id: 48, name: '蘑菇鐵板麵', price: 0, category: '鐵板麵', img: '../Image/14.jpg',
+    { id: 48, name: '蘑菇鐵板麵', price: 70, category: '鐵板麵', img: '../Image/14.jpg',
         options: [
             { name: '加蛋選項', type: 'radio', choices: ['加蛋', '不加'], required: true },
             { name: '蛋熟度', type: 'radio', choices: ['全熟', '半熟', '炒蛋'], required: true },
         ]
     },
-    { id: 49, name: '奶油鐵板麵', price: 0, category: '鐵板麵', img: '../Image/14.jpg',
+    { id: 49, name: '奶油鐵板麵', price: 70, category: '鐵板麵', img: '../Image/14.jpg',
         options: [
             { name: '加蛋選項', type: 'radio', choices: ['加蛋', '不加'], required: true },
             { name: '蛋熟度', type: 'radio', choices: ['全熟', '半熟', '炒蛋'], required: true },
         ]
     },
-    { id: 50, name: '肉醬麵', price: 0, category: '鐵板麵', img: '../Image/14.jpg',
+    { id: 50, name: '肉醬麵', price: 60, category: '鐵板麵', img: '../Image/14.jpg',
         options: [
             { name: '加蛋選項', type: 'radio', choices: ['加蛋', '不加'], required: true },
             { name: '蛋熟度', type: 'radio', choices: ['全熟', '半熟', '炒蛋'], required: true },
         ]
     },
-    { id: 51, name: '沙茶麵', price: 0, category: '鐵板麵', img: '../Image/14.jpg',
+    { id: 51, name: '沙茶麵', price: 60, category: '鐵板麵', img: '../Image/14.jpg',
         options: [
             { name: '加蛋選項', type: 'radio', choices: ['加蛋', '不加'], required: true },
             { name: '蛋熟度', type: 'radio', choices: ['全熟', '半熟', '炒蛋'], required: true },
         ]
     },
-    { id: 52, name: '宮保麵', price: 0, category: '鐵板麵', img: '../Image/14.jpg',
+    { id: 52, name: '宮保麵', price: 70, category: '鐵板麵', img: '../Image/14.jpg',
         options: [
             { name: '加蛋選項', type: 'radio', choices: ['加蛋', '不加'], required: true },
             { name: '蛋熟度', type: 'radio', choices: ['全熟', '半熟', '炒蛋'], required: true },
         ]
     },
-    { id: 53, name: '荷包蛋', price: 0, category: '中式餐點', img: '../Image/15.jpg',
+    { id: 53, name: '荷包蛋', price: 15, category: '中式餐點', img: '../Image/15.jpg',
         options: [
             { name: '蛋熟度', type: 'radio', choices: ['全熟', '半熟',], required: true },
         ]
     },
-    { id: 54, name: '熱狗', price: 0, category: '中式餐點', img: '../Image/16.jpg' },
-    { id: 55, name: '薯餅', price: 0, category: '中式餐點', img: '../Image/17.jpg' },
-    { id: 56, name: '薯條', price: 0, category: '中式餐點', img: '../Image/18.jpg' },
-    { id: 57, name: '雞塊', price: 0, category: '中式餐點', img: '../Image/19.jpg' },
-    { id: 58, name: '港式蘿蔔糕', price: 0, category: '中式餐點', img: '../Image/20.jpg' },
-    { id: 59, name: '蔥油餅', price: 0, category: '中式餐點', img: '../Image/21.jpg',
+    { id: 54, name: '熱狗', price: 20, category: '中式餐點', img: '../Image/16.jpg' },
+    { id: 55, name: '薯餅', price: 25, category: '中式餐點', img: '../Image/17.jpg' },
+    { id: 56, name: '薯條', price: 40, category: '中式餐點', img: '../Image/18.jpg' },
+    { id: 57, name: '雞塊', price: 40, category: '中式餐點', img: '../Image/19.jpg' },
+    { id: 58, name: '港式蘿蔔糕', price: 45, category: '中式餐點', img: '../Image/20.jpg' },
+    { id: 59, name: '蔥油餅', price: 45, category: '中式餐點', img: '../Image/21.jpg',
         options: [
             { name: '加蛋選項', type: 'radio', choices: ['加蛋', '不加'], required: true },
         ]
     },
-    { id: 60, name: '奶酪', price: 0, category: '點心', img: '../Image/22.png' },
-    { id: 61, name: '布丁', price: 0, category: '點心', img: '../Image/23.jpg' },
-    { id: 62, name: '紅茶', price: 0, category: '飲料', img: '../Image/8.png',
+    { id: 60, name: '奶酪', price: 40, category: '點心', img: '../Image/22.png' },
+    { id: 61, name: '布丁', price: 30, category: '點心', img: '../Image/23.jpg' },
+    { id: 62, name: '紅茶', price: 30, category: '飲料', img: '../Image/8.png',
         options: [
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
             { name: '甜度', type: 'radio', choices: ['正常甜', '微甜'], required: true },
@@ -296,7 +296,7 @@ const menuItems = [
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
         ]
     },
-    { id: 63, name: '奶茶', price: 0, category: '飲料', img: '../Image/3.jpeg',
+    { id: 63, name: '奶茶', price: 30, category: '飲料', img: '../Image/3.jpeg',
         options: [
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
             { name: '甜度', type: 'radio', choices: ['正常甜', '微甜'], required: true },
@@ -304,7 +304,7 @@ const menuItems = [
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
         ]
     },
-    { id: 64, name: '鮮奶茶', price: 0, category: '飲料', img: '../Image/24.jpeg',
+    { id: 64, name: '鮮奶茶', price: 40, category: '飲料', img: '../Image/24.jpeg',
         options: [
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
             { name: '甜度', type: 'radio', choices: ['正常甜', '微甜'], required: true },
@@ -312,21 +312,21 @@ const menuItems = [
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
         ]
     },
-    { id: 65, name: '綠茶', price: 0, category: '飲料', img: '../Image/2.jpg',
+    { id: 65, name: '綠茶', price: 30, category: '飲料', img: '../Image/2.jpg',
         options: [
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
             { name: '甜度', type: 'radio', choices: ['正常甜', '微甜', '無糖'], required: true },
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: true }
         ]
     },
-    { id: 66, name: '奶綠', price: 0, category: '飲料', img: '../Image/25.jpeg', 
+    { id: 66, name: '奶綠', price: 30, category: '飲料', img: '../Image/25.jpeg', 
         options: [
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
             { name: '甜度', type: 'radio', choices: ['正常甜', '微甜', '無糖'], required: true },
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: true }
         ]
     },
-    { id: 67, name: '豆漿', price: 0, category: '飲料', img: '../Image/4.jpeg',
+    { id: 67, name: '豆漿', price: 30, category: '飲料', img: '../Image/4.jpeg',
         options: [
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
             { name: '甜度', type: 'radio', choices: ['正常甜', '微甜', '無糖'], required: true },
@@ -334,26 +334,26 @@ const menuItems = [
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
         ]
     },
-    { id: 68, name: '米漿', price: 0, category: '飲料', img: '../Image/31.jpeg',
+    { id: 68, name: '米漿', price: 35, category: '飲料', img: '../Image/31.jpeg',
         options: [
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
         ]
     },
-    { id: 69, name: '柳橙汁', price: 0, category: '飲料', img: '../Image/26.jpeg',
-        options: [
-            { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
-            { name: '甜度', type: 'radio', choices: ['正常不加糖', '加微糖'], required: true },
-            { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: true }
-        ]
-    },
-    { id: 70, name: '蘋果汁', price: 0, category: '飲料', img: '../Image/27.jpeg',
+    { id: 69, name: '柳橙汁', price: 50, category: '飲料', img: '../Image/26.jpeg',
         options: [
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
             { name: '甜度', type: 'radio', choices: ['正常不加糖', '加微糖'], required: true },
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: true }
         ]
     },
-    { id: 71, name: '美式', price: 0, category: '飲料', img: '../Image/28.jpeg',
+    { id: 70, name: '蘋果汁', price: 45, category: '飲料', img: '../Image/27.jpeg',
+        options: [
+            { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
+            { name: '甜度', type: 'radio', choices: ['正常不加糖', '加微糖'], required: true },
+            { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: true }
+        ]
+    },
+    { id: 71, name: '美式', price: 35, category: '飲料', img: '../Image/28.jpeg',
         options: [
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
             { name: '甜度', type: 'radio', choices: ['正常不加糖', '加微糖'], required: true },
@@ -361,14 +361,14 @@ const menuItems = [
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
         ]
     },
-    { id: 72, name: '特調', price: 0, category: '飲料', img: '../Image/30.jpeg',
+    { id: 72, name: '特調', price: 45, category: '飲料', img: '../Image/30.jpeg',
         options: [
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
             { name: '溫度', type: 'radio', choices: ['冰', '熱'], required: true },
             { name: '冰塊', type: 'radio', choices: ['正常冰', '微冰', '滿冰'], required: false }
         ]
     },
-    { id: 73, name: '拿鐵', price: 0, category: '飲料', img: '../Image/29.jpeg',
+    { id: 73, name: '拿鐵', price: 45, category: '飲料', img: '../Image/29.jpeg',
         options: [
             { name: '杯子大小', type: 'radio', choices: ['中杯', '大杯'], required: true },
             { name: '溫度', type: 'radio', choices: ['冰', '熱'], required: true },
